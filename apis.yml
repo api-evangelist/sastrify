@@ -1,0 +1,37 @@
+aid: sastrify
+name: Sastrify
+description: >-
+  Sastrify is a SaaS procurement and management platform that helps companies
+  manage, optimize, and control their software subscriptions. The Sastrify API
+  enables programmatic access to SaaS spend data, vendor management, and
+  procurement workflows using REST and GraphQL interfaces.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - SaaS Management
+  - Procurement
+  - Software Spend
+  - Vendor Management
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/sastrify/refs/heads/main/apis.yml
+created: '2026-03-16'
+modified: '2026-03-16'
+specificationVersion: '0.19'
+apis:
+  - aid: sastrify:sastrify
+    name: Sastrify API
+    description: >-
+      The Sastrify API provides REST and GraphQL interfaces for accessing SaaS
+      procurement data, managing software subscriptions, vendor relationships,
+      and spend analytics programmatically.
+    humanURL: https://www.sastrify.com/
+    tags:
+      - SaaS Management
+      - Procurement
+      - Software Spend
+    properties:
+      - type: Documentation
+        url: https://www.sastrify.com/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
