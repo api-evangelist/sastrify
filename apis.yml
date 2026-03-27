@@ -1,10 +1,11 @@
 aid: sastrify
 name: Sastrify
 description: >-
-  Sastrify is a SaaS procurement and management platform that helps companies
-  manage, optimize, and control their software subscriptions. The Sastrify API
-  enables programmatic access to SaaS spend data, vendor management, and
-  procurement workflows using REST and GraphQL interfaces.
+  Sastrify is an AI-powered SaaS management and procurement platform that unites
+  IT, Finance, and Procurement on one intelligent platform. It discovers every
+  tool, manages licenses, benchmarks spend automatically, and provides
+  procurement workflow automation to help companies optimize and control their
+  software subscriptions.
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
@@ -12,26 +13,58 @@ tags:
   - Procurement
   - Software Spend
   - Vendor Management
+  - License Management
+  - Cost Optimization
 url: >-
   https://raw.githubusercontent.com/api-evangelist/sastrify/refs/heads/main/apis.yml
 created: '2026-03-16'
-modified: '2026-03-16'
+modified: '2026-03-27'
 specificationVersion: '0.19'
 apis:
-  - aid: sastrify:sastrify
-    name: Sastrify API
+  - aid: sastrify:sastrify-platform
+    name: Sastrify Platform
     description: >-
-      The Sastrify API provides REST and GraphQL interfaces for accessing SaaS
-      procurement data, managing software subscriptions, vendor relationships,
-      and spend analytics programmatically.
-    humanURL: https://www.sastrify.com/
+      The Sastrify platform provides SaaS management capabilities including
+      software discovery, license optimization, vendor negotiations, and
+      benchmark insights. It offers native integrations with accounting
+      software, SSO providers, and SaaS tools for usage analytics and spend
+      visibility.
+    humanURL: https://www.sastrify.com/platform
     tags:
       - SaaS Management
       - Procurement
       - Software Spend
+      - License Management
     properties:
       - type: Documentation
-        url: https://www.sastrify.com/
+        url: https://support.sastrify.com/support/home
+      - type: IntegrationDocumentation
+        url: https://www.sastrify.com/native-integrations
+      - type: GettingStarted
+        url: https://support.sastrify.com/support/solutions/folders/101000262118
+common:
+  - type: Website
+    url: https://www.sastrify.com/
+  - type: Platform
+    url: https://www.sastrify.com/platform
+  - type: Pricing
+    url: https://www.sastrify.com/pricing
+  - type: Blog
+    url: https://www.sastrify.com/blog
+  - type: Support
+    url: https://support.sastrify.com/support/home
+  - type: GettingStarted
+    url: https://support.sastrify.com/support/solutions/folders/101000262118
+  - type: Integrations
+    url: https://www.sastrify.com/native-integrations
+  - type: FAQ
+    url: https://support.sastrify.com/support/solutions/folders/101000267482
+  - type: GitHub
+    url: https://github.com/Sastrify
+  - type: Login
+    url: https://app.sastrify.com/
+  - type: SignUp
+    url: https://www.sastrify.com/
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
