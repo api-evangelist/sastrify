@@ -9,12 +9,12 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - SaaS Management
+  - Cost Optimization
+  - License Management
   - Procurement
+  - SaaS Management
   - Software Spend
   - Vendor Management
-  - License Management
-  - Cost Optimization
 url: >-
   https://raw.githubusercontent.com/api-evangelist/sastrify/refs/heads/main/apis.yml
 created: '2026-03-16'
@@ -31,10 +31,10 @@ apis:
       visibility.
     humanURL: https://www.sastrify.com/platform
     tags:
-      - SaaS Management
-      - Procurement
-      - Software Spend
       - License Management
+      - Procurement
+      - SaaS Management
+      - Software Spend
     properties:
       - type: Documentation
         url: https://support.sastrify.com/support/home
