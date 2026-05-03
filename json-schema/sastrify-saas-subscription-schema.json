@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/sastrify/main/json-schema/sastrify-saas-subscription-schema.json",
+  "title": "SaaSSubscription",
+  "description": "Schema for a SaaS application subscription managed within the Sastrify platform",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the subscription record in Sastrify",
+      "example": "sub_01HXYZ1234567890"
+    },
+    "applicationName": {
+      "type": "string",
+      "description": "Name of the SaaS application",
+      "example": "Salesforce"
+    },
+    "vendorName": {
+      "type": "string",
+      "description": "Name of the SaaS vendor or publisher",
+      "example": "Salesforce, Inc."
+    },
+    "category": {
+      "type": "string",
+      "description": "Functional category of the SaaS tool",
+      "example": "CRM",
+      "enum": [
+        "CRM",
+        "Communication",
+        "Project Management",
+        "HR",
+        "Finance",
+        "Security",
+        "Analytics",
+        "Design",
+        "Development",
+        "Marketing",
+        "Legal",
+        "IT Operations",
+        "Document Management",
+        "Collaboration",
+        "Other"
+      ]
+    },
+    "annualCost": {
+      "type": "number",
+      "description": "Annual cost of the subscription in the contract currency",
+      "minimum": 0,
+      "example": 120000
+    },
+    "currency": {
+      "type": "string",
+      "description": "ISO 4217 currency code for the annual cost",
+      "pattern": "^[A-Z]{3}$",
+      "example": "USD"
+    },
+    "licenseCount": {
+      "type": "integer",
+      "description": "Total number of licenses or seats in the current contract",
+      "minimum": 1,
+      "example": 200
+    },
+    "activeUsers": {
+      "type": "integer",
+      "description": "Number of users active in the past 30 days",
+      "minimum": 0,
+      "example": 145
+    },
+    "utilizationRate": {
+      "type": "number",
+      "description": "Percentage of provisioned licenses actively used (activeUsers / licenseCount)",
+      "minimum": 0,
+      "maximum": 100,
+      "example": 72.5
+    },
+    "renewalDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Contract renewal date",
+      "example": "2026-12-31"
+    },
+    "contractStartDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Start date of the current contract term",
+      "example": "2025-01-01"
+    },
+    "paymentTerms": {
+      "type": "string",
+      "description": "Payment schedule for the subscription",
+      "example": "Annual Prepaid",
+      "enum": ["Annual Prepaid", "Monthly", "Quarterly", "Multi-Year"]
+    },
+    "autoRenew": {
+      "type": "boolean",
+      "description": "Whether the contract auto-renews at expiration",
+      "example": true
+    },
+    "contractOwner": {
+      "type": "string",
+      "description": "Name or email of the internal owner responsible for this subscription",
+      "example": "jane.smith@example.com"
+    },
+    "department": {
+      "type": "string",
+      "description": "Primary business department using this tool",
+      "example": "Sales"
+    },
+    "benchmarkData": {
+      "type": "object",
+      "description": "Market pricing benchmark for this tool category",
+      "properties": {
+        "medianPricePerSeat": {
+          "type": "number",
+          "description": "Median market price per seat per year for this tool category",
+          "example": 560
+        },
+        "organizationPricePerSeat": {
+          "type": "number",
+          "description": "Current price per seat per year paid by the organization",
+          "example": 600
+        },
+        "savingsOpportunity": {
+          "type": "number",
+          "description": "Estimated annual savings if price is brought to benchmark",
+          "example": 8000
+        },
+        "percentile": {
+          "type": "integer",
+          "description": "Price percentile (e.g., 75 means paying more than 75% of similar companies)",
+          "minimum": 0,
+          "maximum": 100,
+          "example": 72
+        }
+      }
+    },
+    "discoverySource": {
+      "type": "string",
+      "description": "How the subscription was discovered by Sastrify",
+      "example": "SSO Integration",
+      "enum": [
+        "SSO Integration",
+        "Accounting Integration",
+        "Browser Extension",
+        "Manual Entry",
+        "Email Integration"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "description": "Current status of the subscription in Sastrify",
+      "example": "Active",
+      "enum": ["Active", "Pending Renewal", "Cancelled", "Under Review", "In Negotiation"]
+    }
+  },
+  "required": ["applicationName", "vendorName", "annualCost", "currency", "licenseCount", "renewalDate"],
+  "additionalProperties": false
+}

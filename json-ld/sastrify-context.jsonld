@@ -1,0 +1,109 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "sastrify": "https://www.sastrify.com/ontology#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "SaaSApplication": {
+      "@id": "sastrify:SaaSApplication",
+      "@type": "@id",
+      "comment": "A software-as-a-service application managed in the Sastrify platform"
+    },
+    "SaaSSubscription": {
+      "@id": "sastrify:SaaSSubscription",
+      "@type": "@id",
+      "comment": "A subscription contract for a SaaS application including license counts and renewal dates"
+    },
+    "LicenseInventory": {
+      "@id": "sastrify:LicenseInventory",
+      "@type": "@id",
+      "comment": "The set of licenses owned by an organization for a SaaS tool"
+    },
+    "SpendBenchmark": {
+      "@id": "sastrify:SpendBenchmark",
+      "@type": "@id",
+      "comment": "Market pricing benchmark data for a SaaS tool category"
+    },
+    "VendorNegotiation": {
+      "@id": "sastrify:VendorNegotiation",
+      "@type": "@id",
+      "comment": "A procurement negotiation process managed through Sastrify"
+    },
+    "RenewalAlert": {
+      "@id": "sastrify:RenewalAlert",
+      "@type": "@id",
+      "comment": "A notification triggered ahead of a SaaS contract renewal date"
+    },
+    "UsageAnalytics": {
+      "@id": "sastrify:UsageAnalytics",
+      "@type": "@id",
+      "comment": "Usage data and activity metrics for a SaaS application"
+    },
+    "SoftwareStack": {
+      "@id": "sastrify:SoftwareStack",
+      "@type": "@id",
+      "comment": "The complete inventory of SaaS tools in use within an organization"
+    },
+    "ProcurementWorkflow": {
+      "@id": "sastrify:ProcurementWorkflow",
+      "@type": "@id",
+      "comment": "A structured process for evaluating, approving, and purchasing SaaS tools"
+    },
+
+    "applicationName": {
+      "@id": "sastrify:applicationName",
+      "@type": "xsd:string"
+    },
+    "vendorName": {
+      "@id": "sastrify:vendorName",
+      "@type": "xsd:string"
+    },
+    "annualCost": {
+      "@id": "sastrify:annualCost",
+      "@type": "xsd:decimal"
+    },
+    "currency": {
+      "@id": "sastrify:currency",
+      "@type": "xsd:string"
+    },
+    "licenseCount": {
+      "@id": "sastrify:licenseCount",
+      "@type": "xsd:integer"
+    },
+    "activeUsers": {
+      "@id": "sastrify:activeUsers",
+      "@type": "xsd:integer"
+    },
+    "renewalDate": {
+      "@id": "sastrify:renewalDate",
+      "@type": "xsd:date"
+    },
+    "contractStartDate": {
+      "@id": "sastrify:contractStartDate",
+      "@type": "xsd:date"
+    },
+    "paymentTerms": {
+      "@id": "sastrify:paymentTerms",
+      "@type": "xsd:string"
+    },
+    "category": {
+      "@id": "sastrify:category",
+      "@type": "xsd:string"
+    },
+    "benchmarkSavingsPercent": {
+      "@id": "sastrify:benchmarkSavingsPercent",
+      "@type": "xsd:decimal"
+    },
+    "utilizationRate": {
+      "@id": "sastrify:utilizationRate",
+      "@type": "xsd:decimal"
+    },
+
+    "Organization": "schema:Organization",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "SoftwareApplication": "schema:SoftwareApplication"
+  }
+}

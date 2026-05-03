@@ -1,0 +1,210 @@
+vocabulary:
+  name: Sastrify SaaS Management Vocabulary
+  description: >-
+    Domain vocabulary for the Sastrify SaaS management and procurement platform.
+    Covers concepts related to SaaS spend optimization, license management,
+    vendor procurement, software discovery, and IT governance for enterprise
+    software stacks.
+  version: "1.0.0"
+  created: "2026-05-02"
+  modified: "2026-05-02"
+
+domains:
+  - name: SaaS Management
+    description: Core concepts for managing enterprise SaaS subscriptions and spend
+    terms:
+      - term: SaaS Management Platform (SMP)
+        abbreviation: SMP
+        definition: >-
+          A software category that provides centralized visibility and control
+          over an organization's SaaS application portfolio. Sastrify is an
+          AI-powered SMP that discovers tools, optimizes licenses, and automates
+          procurement workflows.
+        related: [Software Stack, License Management]
+
+      - term: Software Stack
+        definition: >-
+          The complete inventory of SaaS and on-premise tools in use within an
+          organization. Sastrify discovers and catalogs the full software stack
+          through SSO, accounting, and browser extension integrations.
+        related: [SaaS Discovery, Shadow IT]
+
+      - term: SaaS Discovery
+        definition: >-
+          The automated process of finding all SaaS applications used within
+          an organization, including sanctioned tools and shadow IT. Sastrify
+          discovers tools through SSO provider logs, accounting software, and
+          credit card feeds.
+        related: [Shadow IT, Software Stack]
+
+      - term: Shadow IT
+        definition: >-
+          SaaS applications used within an organization without formal IT
+          approval or awareness. A primary concern in enterprise SaaS
+          management due to security and compliance risks.
+
+      - term: Tool Consolidation
+        definition: >-
+          The process of reducing the number of overlapping SaaS tools by
+          identifying redundant functionality and standardizing on fewer
+          vendors. Sastrify identifies consolidation opportunities based on
+          feature overlap analysis.
+
+  - name: License Management
+    description: Concepts related to software license optimization and tracking
+    terms:
+      - term: License
+        definition: >-
+          An individual entitlement to use a SaaS application, typically
+          associated with a named user or concurrent session. License counts
+          are tracked against active usage to identify waste.
+        related: [License Optimization, Utilization Rate]
+
+      - term: License Optimization
+        definition: >-
+          The process of right-sizing software subscriptions by matching
+          license counts to actual usage. Sastrify benchmarks utilization
+          rates and recommends license reductions at renewal.
+        related: [License, Utilization Rate, Renewal Management]
+
+      - term: Utilization Rate
+        definition: >-
+          The percentage of provisioned licenses that are actively used within
+          a defined period. A low utilization rate (e.g., under 60%) indicates
+          over-licensing and optimization opportunity.
+        unit: percentage
+
+      - term: Provisioned User
+        definition: >-
+          A user account that has been granted access to a SaaS application
+          and consumes a license, regardless of actual activity level.
+
+      - term: Active User
+        definition: >-
+          A provisioned user who has logged in or performed an action in a
+          SaaS application within a defined time window (typically 30 days).
+
+      - term: Dormant License
+        definition: >-
+          A provisioned license assigned to a user who has not been active in
+          the application for an extended period, typically 60 or 90 days.
+          Primary target for license reclamation.
+
+      - term: License Reclamation
+        definition: >-
+          The process of deprovision unused or dormant licenses to reduce
+          subscription costs, typically at or before the renewal date.
+
+  - name: Procurement and Vendor Management
+    description: Concepts related to SaaS purchasing, renewal, and vendor negotiation
+    terms:
+      - term: Renewal Management
+        definition: >-
+          The process of managing SaaS contract renewal cycles, including
+          tracking renewal dates, generating alerts, and preparing for
+          vendor negotiations ahead of renewal deadlines.
+        related: [Renewal Alert, Contract Negotiation]
+
+      - term: Renewal Alert
+        definition: >-
+          A notification triggered a configurable number of days before a
+          SaaS contract expires, prompting procurement action. Sastrify
+          typically alerts 90, 60, and 30 days before renewal.
+
+      - term: Spend Benchmark
+        definition: >-
+          Market pricing data for a SaaS tool category used to validate whether
+          an organization's contract price is competitive. Sastrify provides
+          benchmarks based on aggregated customer data and market research.
+        related: [Vendor Negotiation, Cost Optimization]
+
+      - term: Vendor Negotiation
+        definition: >-
+          The process of negotiating contract terms, pricing, and conditions
+          with SaaS vendors. Sastrify assists with negotiation templates,
+          benchmark data, and managed negotiation services.
+        related: [Spend Benchmark, Renewal Management]
+
+      - term: Procurement Workflow
+        definition: >-
+          A structured approval and evaluation process for new SaaS tool
+          purchases. Sastrify provides workflow automation to route purchase
+          requests through IT, Finance, and Security review stages.
+        related: [Software Request, Approval Workflow]
+
+      - term: Software Request
+        definition: >-
+          A formal request from a business unit to purchase or subscribe to a
+          new SaaS tool. Goes through the procurement workflow for evaluation
+          and approval.
+        related: [Procurement Workflow]
+
+      - term: Contract
+        definition: >-
+          The agreement between an organization and a SaaS vendor specifying
+          license counts, pricing, payment terms, and renewal conditions.
+          Sastrify stores and tracks contracts for each tool in the stack.
+
+      - term: Payment Terms
+        definition: >-
+          The schedule and method of payment for a SaaS contract (e.g.,
+          annual prepaid, monthly, quarterly). Annual prepaid contracts
+          typically offer better pricing than monthly subscriptions.
+
+  - name: Spend Management
+    description: Concepts related to SaaS cost tracking and optimization
+    terms:
+      - term: Annual Recurring Revenue (ARR)
+        abbreviation: ARR
+        definition: >-
+          The annualized value of subscription revenue or spend for a SaaS
+          tool. Sastrify aggregates ARR across all tools to provide total
+          SaaS portfolio spend visibility.
+        unit: currency
+
+      - term: Cost Optimization
+        definition: >-
+          The process of reducing SaaS spend through license right-sizing,
+          vendor negotiation, tool consolidation, and timing renewal negotiations
+          strategically. Sastrify quantifies savings potential by tool.
+
+      - term: Spend Visibility
+        definition: >-
+          A consolidated view of all SaaS-related expenditure across an
+          organization, normalized from accounting systems, credit card feeds,
+          and vendor invoices.
+
+      - term: ROI Analysis
+        definition: >-
+          An assessment of the business value delivered by a SaaS tool relative
+          to its cost. Factors include active user count, feature utilization,
+          and business outcomes.
+
+  - name: Integration and Discovery
+    description: Methods Sastrify uses to discover and integrate with enterprise systems
+    terms:
+      - term: SSO Integration
+        definition: >-
+          Connection to an organization's Single Sign-On provider (e.g.,
+          Okta, Azure AD) to discover all SaaS tools with SSO-based access.
+          Provides user provisioning and login activity data.
+        related: [SaaS Discovery, Usage Analytics]
+
+      - term: Accounting Integration
+        definition: >-
+          Connection to accounting or expense management systems (e.g.,
+          QuickBooks, NetSuite, Expensify) to identify SaaS-related payments
+          and subscriptions from financial records.
+        related: [Spend Visibility]
+
+      - term: Browser Extension
+        definition: >-
+          A lightweight browser plugin that detects SaaS applications accessed
+          by users, providing a supplementary discovery mechanism beyond SSO
+          and accounting integrations.
+
+      - term: Native Integration
+        definition: >-
+          A direct, pre-built connector between Sastrify and a SaaS vendor
+          or enterprise system (e.g., Google Workspace, Slack, Salesforce)
+          enabling automated data exchange without manual configuration.

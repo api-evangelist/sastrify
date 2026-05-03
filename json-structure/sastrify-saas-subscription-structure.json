@@ -1,0 +1,139 @@
+{
+  "name": "SaaSSubscription",
+  "description": "Structure of a SaaS application subscription record in the Sastrify platform",
+  "type": "object",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "description": "Unique identifier for the subscription in Sastrify",
+      "required": false,
+      "example": "sub_01HXYZ1234567890"
+    },
+    {
+      "name": "applicationName",
+      "type": "string",
+      "description": "Name of the SaaS application (e.g., Slack, Salesforce, Zoom)",
+      "required": true,
+      "example": "Salesforce"
+    },
+    {
+      "name": "vendorName",
+      "type": "string",
+      "description": "Legal name of the vendor / publisher",
+      "required": true,
+      "example": "Salesforce, Inc."
+    },
+    {
+      "name": "category",
+      "type": "string",
+      "description": "Functional category (CRM, Communication, Project Management, etc.)",
+      "required": false,
+      "example": "CRM"
+    },
+    {
+      "name": "annualCost",
+      "type": "number",
+      "description": "Total annual spend for this subscription in contract currency",
+      "required": true,
+      "example": 120000
+    },
+    {
+      "name": "currency",
+      "type": "string",
+      "description": "ISO 4217 currency code",
+      "required": true,
+      "example": "USD"
+    },
+    {
+      "name": "licenseCount",
+      "type": "integer",
+      "description": "Number of provisioned licenses / seats",
+      "required": true,
+      "example": 200
+    },
+    {
+      "name": "activeUsers",
+      "type": "integer",
+      "description": "Users active in the last 30 days",
+      "required": false,
+      "example": 145
+    },
+    {
+      "name": "utilizationRate",
+      "type": "number",
+      "description": "Active users as percentage of total licenses (0-100)",
+      "required": false,
+      "example": 72.5
+    },
+    {
+      "name": "renewalDate",
+      "type": "date",
+      "description": "Contract renewal date (ISO 8601 YYYY-MM-DD)",
+      "required": true,
+      "example": "2026-12-31"
+    },
+    {
+      "name": "contractStartDate",
+      "type": "date",
+      "description": "Start date of the current contract term",
+      "required": false,
+      "example": "2025-01-01"
+    },
+    {
+      "name": "paymentTerms",
+      "type": "string",
+      "description": "Payment schedule: Annual Prepaid, Monthly, Quarterly, Multi-Year",
+      "required": false,
+      "example": "Annual Prepaid"
+    },
+    {
+      "name": "autoRenew",
+      "type": "boolean",
+      "description": "Whether the contract auto-renews at expiration",
+      "required": false,
+      "example": true
+    },
+    {
+      "name": "contractOwner",
+      "type": "string",
+      "description": "Internal owner responsible for the subscription",
+      "required": false,
+      "example": "jane.smith@example.com"
+    },
+    {
+      "name": "department",
+      "type": "string",
+      "description": "Primary business department using this tool",
+      "required": false,
+      "example": "Sales"
+    },
+    {
+      "name": "benchmarkData",
+      "type": "object",
+      "description": "Market pricing benchmark data from Sastrify's intelligence engine",
+      "required": false,
+      "nestedFields": [
+        {"name": "medianPricePerSeat", "type": "number", "description": "Median market price per seat/year"},
+        {"name": "organizationPricePerSeat", "type": "number", "description": "Current price per seat/year"},
+        {"name": "savingsOpportunity", "type": "number", "description": "Estimated annual savings potential"},
+        {"name": "percentile", "type": "integer", "description": "Price percentile vs. similar companies"}
+      ]
+    },
+    {
+      "name": "discoverySource",
+      "type": "string",
+      "description": "How the tool was discovered: SSO Integration, Accounting Integration, Browser Extension, Manual Entry",
+      "required": false,
+      "example": "SSO Integration"
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "description": "Subscription status: Active, Pending Renewal, Cancelled, Under Review, In Negotiation",
+      "required": false,
+      "example": "Active"
+    }
+  ],
+  "source": "json-schema/sastrify-saas-subscription-schema.json"
+}
