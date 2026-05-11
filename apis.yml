@@ -78,6 +78,35 @@ common:
     url: json-schema/sastrify-saas-subscription-schema.json
   - type: JSONStructure
     url: json-structure/sastrify-saas-subscription-structure.json
+integrations:
+  - name: 1Password
+  - name: AWS
+  - name: Adobe Creative Cloud
+  - name: Asana
+  - name: Azure
+  - name: Confluence
+  - name: DNS filter
+  - name: Dropbox Business
+  - name: Freshdesk
+  - name: Freshsales
+  - name: Gemini
+  - name: GitHub Enterprise
+  - name: GitLab
+  - name: Google Workspace
+  - name: Google cloud
+  - name: Jamf
+  - name: Jira
+  - name: Jumpcloud
+  - name: LastPass Business
+  - name: Lucidchart
+  - name: Microsoft 365
+  - name: Microsoft Azure
+  - name: Miro Enterprise
+  - name: OpenAI
+  - name: Salesforce
+  - name: Slack
+  - name: Spin.ai
+  - name: Zendesk
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
