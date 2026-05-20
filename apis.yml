@@ -48,6 +48,8 @@ apis:
         url: https://support.sastrify.com/support/solutions/folders/101000262118
 
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/sastrify
   - type: Website
     url: https://www.sastrify.com/
   - type: Platform
