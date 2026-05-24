@@ -80,6 +80,8 @@ common:
     url: json-schema/sastrify-saas-subscription-schema.json
   - type: JSONStructure
     url: json-structure/sastrify-saas-subscription-structure.json
+  - type: LLMsTxt
+    url: https://app.sastrify.com/llms.txt
 integrations:
   - name: 1Password
   - name: AWS
