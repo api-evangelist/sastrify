@@ -70,7 +70,7 @@ common:
     url: https://github.com/Sastrify
   - type: Login
     url: https://app.sastrify.com/
-  - type: SignUp
+  - type: Signup
     url: https://www.sastrify.com/
   - type: Vocabulary
     url: vocabulary/sastrify-vocabulary.yml
@@ -80,7 +80,7 @@ common:
     url: json-schema/sastrify-saas-subscription-schema.json
   - type: JSONStructure
     url: json-structure/sastrify-saas-subscription-structure.json
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://app.sastrify.com/llms.txt
 integrations:
   - name: 1Password
