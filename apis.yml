@@ -9,6 +9,17 @@ description: >-
   Sastrify integrates with accounting tools, SSO providers, and SaaS tools for
   usage analytics, spend visibility, and vendor negotiation support.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
